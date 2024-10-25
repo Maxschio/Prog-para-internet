@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bandeira paises</title>
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .flag {
+            width: 150px;
+            height: 100px;
+            border: 1px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+        .flag-italy {
+            background: linear-gradient(to right, green 33%, white 33%, white 66%, red 66%);
+        }
+        .flag-japan {
+            background: white;
+            position: relative;
+        }
+        .flag-japan::before {
+            content: '';
+            width: 60px;
+            height: 60px;
+            background: red;
+            border-radius: 50%;
+            position: absolute;
+        }
+        .flag-netherlands {
+            background: linear-gradient(to bottom, red 33%, white 33%, white 66%, blue 66%);
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="flag flag-netherlands"></div>
+    <div class="flag flag-japan"></div>
+    <div class="flag flag-italy"></div>
+</div>
+</body>
+</html>
