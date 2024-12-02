@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionar Texto</title>
+</head>
+<body>
+
+    <label for="textoInput">Digite algo:</label>
+    <input type="text" id="textoInput">
+    <button id="btnAdicionar">Copiar</button>
+
+    <div id="textos"></div>
+
+    <script>
+
+        let inputTxt = document.querySelector(`#textoInput`);
+        let divResultado = document.querySelector(`#textos`)
+        document.querySelector("button").addEventListener("click", adicionarTexto)
+
+        function adicionarTexto() {
+            divResultado.innerHTML += `<p> ${inputTxt.value} </p>`;
+
+            const texto = document.getElementById('textoInput').value;
+
+            if (texto.trim() !== "") {
+                const paragrafo = document.createElement('p');
+                paragrafo.textContent = texto;
+
+                document.querySelector('.textos').appendChild(paragrafo);
+
+                document.getElementById('textoInput').value = "";
+            } else {
+                alert("Por favor, digite algum texto!");
+            }
+        }
+
+        document.getElementById('btnAdicionar').addEventListener('click', adicionarTexto);
+    </script>
+
+</body>
+</html>

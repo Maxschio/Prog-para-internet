@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>21</title>
+    <style>
+        *{margin: 0x;padding: 0px;}
+        .div{
+            border: 1px solid black;
+        }
+        #calc{
+            min-height: 100vh;
+            display: grid;
+            grid-template-areas:
+            "vis  vis  vis  vis"
+            "ope  ope  ope  ope"
+            "num  num  num  cal"
+            "num  num  num  cal"
+            "low  low  low  cal"
+        }
+        #vis{
+            grid-area: vis;
+            background-color: rgb(226, 226, 226);
+        }
+        #ope{
+            grid-area: ope;
+            background-color: rgb(177, 143, 143);
+        }
+        #num{
+            display: grid;
+            grid-template-areas: 
+            "n7 n8 n9"
+            "n4 n5 n6"
+            "n1 n2 n3"
+            ;
+            grid-area: num;
+            background-color: rgb(137, 221, 137);
+        }
+        #cal{
+            grid-area: cal;
+            background-color: rgb(255, 101, 101);
+        }
+        #low{
+            grid-area: low;
+            background-color: rgb(255, 146, 96);
+        }
+        #num1{grid-area: n1;}
+    </style>
+</head>
+<body>
+    <div id="calc">
+        <div id="vis" class="div"></div>
+        <div id="ope" class="div"></div>
+        <div id="num" class="div">
+            <divi id="num1" class="div"></divi>
+            <divi id="num2" class="div"></divi>
+            <divi id="num3" class="div"></divi>
+            <divi id="num4" class="div"></divi>
+            <divi id="num5" class="div"></divi>
+            <divi id="num6" class="div"></divi>
+            <divi id="num7" class="div"></divi>
+            <divi id="num8" class="div"></divi>
+            <divi id="num9" class="div"></divi>
+        </div>
+        <div id="low" class="div"></div>
+        <div id="cal" class="div"></div>
+    </div>
+</body>
+</html>

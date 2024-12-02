@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soma de Valores</title>
+</head>
+<body>
+    <h1>Soma de Dois Valores</h1>
+    
+    <label for="valor1">Valor 1:</label>
+    <input type="number" id="valor1">
+    <br><br>
+
+    <label for="valor2">Valor 2:</label>
+    <input type="number" id="valor2" >
+    <br><br>
+
+    <button onclick="soma()">Somar</button>
+
+    <script>
+        function soma() {
+            const valor1 = parseFloat(document.getElementById('valor1').value);
+            const valor2 = parseFloat(document.getElementById('valor2').value);
+
+            const resultado = valor1 + valor2;
+
+            console.log('Resultado da soma no console:', resultado); 
+            alert(`Resultado da soma: ${resultado}`); 
+        }
+    </script>
+</body>
+</html>
