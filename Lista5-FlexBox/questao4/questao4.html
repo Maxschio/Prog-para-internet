@@ -1,0 +1,131 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cartões de Paisagens</title>
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+     
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #f0f0f0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    h2 {
+      margin-bottom: 5px;
+    }
+
+    .icon {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      font-size: 35px;
+    }
+
+    .painelTotal {
+      display: flex;
+      gap: 10px;
+    }
+
+    .paineis {
+      position: relative;
+      border-radius: 15px;
+      width: 60px;
+      height: 250px;
+    }
+
+    .paineis:hover {
+      width: 300px;
+      height: 300px;
+    }
+
+    .paineis-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 15px;
+    }
+
+    .paineis-frase {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0, 0, 0, 0.5);
+      color: white;
+      padding: 10px;
+      text-align: center;
+      font-size: 13px;
+      border-radius: 0 0 15px 15px;
+      opacity: 0;
+    }
+
+    .paineis:hover .paineis-frase {
+      opacity: 1;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="painelTotal">
+    <div class="paineis">
+      <img src="chile.png" alt="Paisagem 1" class="paineis-image">
+      <div class="paineis-frase">
+        <h2>Lago gelado</h2>
+        <p>nado no lago</p>
+        <span class="icon">❄️</span>
+      </div>
+    </div>
+
+    <div class="paineis">
+      <img src="grecia.jfif" alt="Paisagem 2" class="paineis-image">
+      <div class="paineis-frase">
+        <h2>Coliseu</h2>
+        <p>arena blabla</p>
+        <span class="icon">🌊</span>
+      </div>
+    </div>
+
+    <div class="paineis">
+      <img src="holanda.jpg" alt="Paisagem 3" class="paineis-image">
+      <div class="paineis-frase">
+        <h2>Casas de holanda</h2>
+        <p>belas casas na frente do lago</p>
+        <span class="icon">🌺</span>
+      </div>
+    </div>
+
+    <div class="paineis">
+      <img src="italia.png" alt="Paisagem 4" class="paineis-image">
+      <div class="paineis-frase">
+        <h2>Nuvens no céu</h2>
+        <p>ponto yutistico</p>
+        <span class="icon">☂️</span>
+      </div>
+    </div>
+
+    <div class="paineis">
+      <img src="paris.jpg" alt="Paisagem 5" class="paineis-image">
+      <div class="paineis-frase">
+        <h2>Rio e Paris</h2>
+        <p>com navio no rio</p>
+        <span class="icon">🥐</span>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
