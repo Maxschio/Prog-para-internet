@@ -39,7 +39,7 @@ function getUsuario($id){
     $db = conectdb();
     $sql = "select * from usuarios where id = ?";
     $stmt = $db->prepare($sql);
-    $stmt->bindValue(1,$id);
+    $stmt->bindValue(1,$id); //?
     $stmt->execute();
     $usuario = $stmt-> fetch (PDO::FETCH_ASSOC);
     return ($usuario);
@@ -52,14 +52,11 @@ function editar_usuario($id, $nome, $email) {
     $sql = "UPDATE usuarios SET nome = :nome, email = :email WHERE id = :id";
     $stmt = $db->prepare($sql);
     
-    // Bind dos parâmetros
     $stmt->bindParam(':nome', $nome);
     $stmt->bindParam(':email', $email);
     $stmt->bindParam(':id', $id);
-    
-    // Executa a query
+
     $stmt->execute();
-    
     // Fecha a conexão com o banco
     $db = null;
 }

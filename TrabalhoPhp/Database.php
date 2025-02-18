@@ -8,8 +8,8 @@ function conectdb() {
     $host = "localhost";
 
     try {   //Verifica se existe o usuario no banco de dados
-        $db = new PDO("mysql:host=$host;dbname=$database", $user, $pass);
-        $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        $db = new PDO("mysql:host=$host;dbname=$database", $user, $pass); //conecta bd
+        $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); // abre exceção quando ha erro critico
         return $db;
     } catch (PDOException $e) {
         echo "Erro de conexão: " . $e->getMessage();

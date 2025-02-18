@@ -28,10 +28,3 @@
     </fieldset>
 </body>
 </html>
-
-//Esse código monta um formulário de edição de pessoa que:
-
-Preenche automaticamente os campos nome e email com os dados do banco.
-Envia o ID da pessoa (oculto) para saber qual registro editar.
-Define que a ação é "editar" (campo oculto acao).
-Quando clicar no botão "Salvar Alterações", envia tudo para PessoaController.php via POST.

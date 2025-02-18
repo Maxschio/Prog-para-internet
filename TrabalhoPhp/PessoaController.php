@@ -9,14 +9,14 @@ if (isset($_POST["acao"])) {
         {
             $nome = $_POST["nome"];
             $email = $_POST["email"];
-            insere_usuario($nome, $email);
+            insere_usuario($nome, $email); //envia pro  database
             header("Location: listar.php"); //leva para a tela citada: location
             exit();
         }
     } elseif ($_POST["acao"] == "editar") {
         //Lógica para editar um usuário existente
         if (isset($_POST["id"]) && isset($_POST["nome"]) && isset($_POST["email"])) {
-            $id = $_POST["id"];
+            $id = $_POST["id"]; // guarda as inform em variaveis
             $nome = $_POST["nome"];
             $email = $_POST["email"];
             
